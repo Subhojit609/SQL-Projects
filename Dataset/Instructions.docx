@@ -1,0 +1,61 @@
+Data files:
+All the required data files in CSV format are available here:
+
+https://drive.google.com/drive/u/2/folders/1jBhgvdD9LDHclK_FxUWAFbY8_qlDHWGU 
+
+Case Study 1:
+
+The files in the above link: Order1.csv and Order2.csv shows different orders placed on an ecommerce website, the amount of the purchase, any discount provided and order status.
+
+Schema:
+
+Table Name: Order1
+
+OrderId: Order's id 
+OrderItemId: Item ids of the purchase orders.
+QuantityOrdered: Number of items Ordered for an order.
+ItemPrice: Order total value
+PromotionDiscount: Discount of an Order.
+batch_id: Batch id of the order. (Note: Use the last one to fetch out the correct metrics of an order).
+
+Table Name: Order2
+
+OrderId: Order's id 
+Purchasedate: Order date of a Purchase.
+OrderStatus: Status of an order.
+batch_id: Batch id of the order. (Note: Use the last one to fetch out the correct metrics of an order).
+
+
+Write SQL queries to determine:
+
+Q1. Calculate the Total order quantity, GMV and Net sales, where GMV is the summation of all the order values, and Net sale is the values after the discount.
+
+Q2. Calculate Total order quantity, GMV and Net sales for the month of October 2022 where the order status is not equal to "Canceled".
+Case Study 2:
+
+The files in the above link: User1.csv and User2.csv shows user behavior data of a mobile app. 
+
+Schema:
+
+Table Name: User1
+
+user_id: Unique Id of a user.
+country: Country where the users installed the app.
+Platform: Mobile platform the users use to operate the app. 
+user_first_seen_date: Date of installing the app.
+
+Table Name: User2
+
+user_id: Unique Id of a user.
+Date: Date on which the user was using the app. 
+sessionID: Id of a session (30 min. of activity counts as one session for a user.) 
+
+Write SQL queries to determine:
+
+Q1. Find the 3-day, 7-day and overall running sum of the number of unique sessions every day for every “country” and “platform”.
+Q2. Average number of days users use the app.
+Q3. Retention percentage for Day-1, Day-3 and Day-7.
+  
+Retention is defined as the action when a user comes back to the platform, where Day 0 is the install date and subsequently, Day 1 is the date after the install date, and so on. 
+
+For Ex., if the users install the app on 1st July, then Day 1 will be 2nd July, and Day 30 will be 31st July.
